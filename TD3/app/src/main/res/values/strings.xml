@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dice Roller</string>
+
+    <string name="btnMain">Lancer le dé!</string>
+    <string name="nbFaces">Nombre de faces</string>
+    <string name="validate">Valider</string>
+</resources>

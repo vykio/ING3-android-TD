@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TD2</string>
+    <string name="hello_msg">Hello, world!</string>
+
+    <string name="btn1">BTN1</string>
+    <string name="btn2">BTN2</string>
+    <string name="btn3">BTN3</string>
+    <string name="btn4">BTN4</string>
+    <string name="btn5">BTN5</string>
+
+    <!-- Repas.xml -->
+    <string name="entry">Entrée</string>
+    <string name="main_course">Plat</string>
+    <string name="cheese">Fromage</string>
+    <string name="fruit">Fruit</string>
+    <string name="noon">Midi</string>
+    <string name="evening">Soir</string>
+    <string name="validate">Valider</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- Meteo.xml -->
+    <string name="dateText">Sélectionnez une date</string>
+    <string name="timeText">Sélectionnez une heure</string>
+    <string name="temperature">Température (°C)</string>
+    <string name="windSpeed">Vitesse du vent (km/h)</string>
+    <string name="skyState">Etat du ciel</string>
+    <string-array name="skyStates">
+        <item>Degagé</item>
+        <item>Couvert</item>
+        <item>Pluvieux</item>
+    </string-array>
+
+</resources>

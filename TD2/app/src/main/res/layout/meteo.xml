@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/datePickerTextbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:hint="@string/dateText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clickable="false"
+        android:drawableRight="@drawable/ic_baseline_today_24"
+        android:focusable="false"
+        />
+
+    <EditText
+        android:id="@+id/timePickerTextbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:hint="@string/timeText"
+        app:layout_constraintTop_toBottomOf="@id/datePickerTextbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clickable="false"
+        android:drawableRight="@drawable/ic_baseline_access_time_24"
+        android:focusable="false"
+        />
+
+    <EditText
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:hint="@string/temperature"
+        app:layout_constraintTop_toBottomOf="@id/timePickerTextbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:drawableRight="@drawable/ic_baseline_wb_sunny_24"
+        android:inputType="numberDecimal"
+        />
+
+    <EditText
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:hint="@string/windSpeed"
+        app:layout_constraintTop_toBottomOf="@id/temperature"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:drawableRight="@drawable/ic_baseline_near_me_24"
+        android:inputType="numberDecimal"
+        />
+
+    <Spinner
+        android:id="@+id/skyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/windSpeed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/validate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/validate"
+        app:layout_constraintTop_toBottomOf="@id/skyState"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintTop_toBottomOf="@id/validate"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
