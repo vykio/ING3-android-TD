@@ -3,6 +3,7 @@ package fr.avasseur.td6.adapters
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +27,10 @@ class RepoAdapter(repos: List<Repo>, private val listener: (Repo) -> Unit) : Rec
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.repoNameElement.text = mRepos[position].full_name
+        var text = mRepos[position].full_name?.split("/")
+
+        holder.repoNameElement.text = Html.fromHtml((text?.get(0) ?: "ERROR") + "/<b>" + (text?.get(1)
+            ?: "ERROR") + "</b>", Html.FROM_HTML_MODE_COMPACT)
         holder.repoNameElement.setOnClickListener { listener(mRepos[position]) }
     }
 

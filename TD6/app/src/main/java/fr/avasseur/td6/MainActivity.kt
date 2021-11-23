@@ -48,6 +48,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun afficherRepos(repos: List<Repo?>) {
-        Toast.makeText(this, "nombre de dépots : " + repos.size, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Github.com/vykio - Nombre de dépots : " + repos.size, Toast.LENGTH_SHORT).show()
     }
 }

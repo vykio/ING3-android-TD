@@ -14,6 +14,7 @@
         android:theme="@style/Theme.TD6">
         <activity
             android:name=".RepoSearchActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

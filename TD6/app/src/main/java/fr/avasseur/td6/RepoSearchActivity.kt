@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,8 @@ class RepoSearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repo_search)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+
         if (!intent.hasExtra("repoName")) {
             finish()
         }
@@ -40,13 +43,9 @@ class RepoSearchActivity : AppCompatActivity() {
         var recycler: RecyclerView = findViewById(R.id.reposRecyclerView)
         var repos: List<Repo> = ArrayList<Repo>()
 
-        Log.i("azerty", repoName.toString())
-
         service.searchRepos(repoName.toString())?.enqueue(object : Callback<RepoList?> {
             override fun onResponse(call: Call<RepoList?>?, response: Response<RepoList?>) {
                 repos = (response.body() as RepoList).items
-                Log.i("azerty", "Hello")
-                Log.i("azerty", repos.toString())
                 recycler.adapter = RepoAdapter(repos) {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it.html_url)))
                 }
@@ -58,6 +57,8 @@ class RepoSearchActivity : AppCompatActivity() {
             }
         })
 
-
     }
+
+
+
 }
