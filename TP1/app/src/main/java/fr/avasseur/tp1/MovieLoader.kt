@@ -47,7 +47,7 @@ class MovieLoader {
         when(activityId) {
             R.id.action_popular -> {
                 activity.title = "Popular Movies"
-                service.listPopularMovies("1d67ab962871976756067abc79c7e399")?.enqueue(object :
+                service.listPopularMovies(ApiKey.get())?.enqueue(object :
                     Callback<MovieList?> {
                     override fun onResponse(call: Call<MovieList?>?, response: Response<MovieList?>) {
                         movies = (response.body() as MovieList).results
@@ -65,7 +65,7 @@ class MovieLoader {
             }
             R.id.action_upcoming -> {
                 activity.title = "Upcoming Movies"
-                service.listUpcomingMovies("1d67ab962871976756067abc79c7e399")?.enqueue(object :
+                service.listUpcomingMovies(ApiKey.get())?.enqueue(object :
                     Callback<MovieList?> {
                     override fun onResponse(call: Call<MovieList?>?, response: Response<MovieList?>) {
                         movies = (response.body() as MovieList).results
