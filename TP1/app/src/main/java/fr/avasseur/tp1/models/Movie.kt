@@ -6,5 +6,6 @@ class Movie {
     var title: String? = null
     var poster_path: String? = null
     var backdrop_path: String? = null
+    var overview: String? = null
 
 }

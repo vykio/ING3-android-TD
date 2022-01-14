@@ -49,6 +49,8 @@ class MovieDetails : AppCompatActivity() {
 
                 findViewById<TextView>(R.id.movie_title).text = movie.title
                 loadProgress.visibility = View.GONE
+
+                findViewById<TextView>(R.id.movie_desc).text = movie.overview + "\n\n\n Affichage une deuxième fois de la description pour voir la ScrollView \n\n\n "+ movie.overview
             }
 
             override fun onFailure(call: Call<Movie?>, t: Throwable) {
